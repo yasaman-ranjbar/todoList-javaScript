@@ -1,0 +1,154 @@
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir.eot') format('eot'),
+         url('../fonts/Vazir.woff2') format('woff2'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Vazir';
+}
+
+body {
+    color: var(--mainBlack);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--mainWhite);
+}
+
+:root {
+    --primary: #5E35B1;
+    --secondary: #EDE7F6;
+    --mainWhite: #F5F5F5;
+    --mainBlack: #212121;
+    --mainTransition: all 0.3s liner;
+    --mainRed: #FF5252;
+    --mainGreen: #43A047;
+}
+
+header {
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.form-container {
+    display: flex;
+}
+
+form {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+form input {
+    padding: 5px;
+    flex-grow: 1;
+}
+
+form input , form button {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+form button{
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--primary);
+    color: white;
+    
+}
+
+.todo-container {
+    width: 25rem;
+}
+
+.todo{ 
+    display: flex;
+    margin-top: 0.5rem;
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.todo li {
+    flex-grow: 1;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.todo span {
+    display: block;
+    cursor: pointer;
+}
+
+.fa-trash-can{
+    color: var(--mainRed);
+}
+
+.fa-circle-check{
+    color: var(--mainGreen);
+    margin-left: 0.5rem;
+}
+
+.completed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    color: var(--primary);
+
+
+}
+
+.select{
+    position: relative;
+    cursor: pointer;
+    width: 10rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    background-color: white;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: var(--primary);
+    pointer-events: none;
+}
